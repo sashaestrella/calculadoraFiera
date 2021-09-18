@@ -22,5 +22,9 @@
           </table>
         </div>
       </div>
+      <div class="col-md-4 datos-table" >
+        <button class="ver-datos" (click)="verDatos()">Ver datos ingresados</button>
+        <app-datos-ingresados *ngIf="verDatosIngresados" [datos]="datos"></app-datos-ingresados>
+      </div>
     </div>
 </div>

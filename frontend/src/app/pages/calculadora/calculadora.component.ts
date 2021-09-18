@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BackendService } from 'src/services/backend.service';
 
 @Component({
@@ -11,8 +12,26 @@ export class CalculadoraComponent {
   public botones: any = [['7','8','9','X'],['4','5','6','-'],['1','2','3','+']]
   public division: string = '%'
   public cero: string = '0'
+  public datos: any
+  public verDatosIngresados: boolean = false
 
-  constructor(private backendService: BackendService) { }
+  constructor(private backendService: BackendService, private router: Router) { }
+
+  public getDatos() {
+    this.backendService.getDatos().subscribe(
+      res => {
+        this.datos = res;
+      },
+      err => {
+        this.router.navigateByUrl('/error');
+      }
+    )
+  }
+
+  public verDatos() {
+    this.getDatos()
+    this.verDatosIngresados = this.verDatosIngresados ? false : true
+  }
 
   public addToExpression(data: string): void {
     if(this.result == '0') {
@@ -27,6 +46,7 @@ export class CalculadoraComponent {
   }
 
   public setResult(): void {
+    this.verDatosIngresados = false
     let datoPost = {
       dato: this.result
     }
@@ -36,7 +56,7 @@ export class CalculadoraComponent {
         this.result = this.operation(this.result)  
       }, 
       err => {
-        console.log(err.error);
+        this.router.navigateByUrl('/error');
       }
     )
   }
@@ -67,7 +87,7 @@ export class CalculadoraComponent {
       tmp = this.indexOperator(string, "+")
       return (parseInt(tmp[0]) + parseInt(tmp[1])).toString();
     }
-    
+
     if(this.indexOperator(string, "-")) {
       tmp = this.indexOperator(string, "-")
       return (parseInt(tmp[0]) - parseInt(tmp[1])).toString();

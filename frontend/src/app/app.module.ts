@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { BotonComponent } from './components/boton/boton.component';
 import { CalculadoraComponent } from './pages/calculadora/calculadora.component';
+import { DatosIngresadosComponent } from './components/datos-ingresados/datos-ingresados.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CalculadoraComponent,
-    BotonComponent
+    BotonComponent,
+    DatosIngresadosComponent
   ],
   imports: [
     BrowserModule,

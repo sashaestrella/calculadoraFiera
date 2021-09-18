@@ -1,0 +1,26 @@
+<div class="ranking-table">
+    <div class="card shadow">
+      <div class="card-header border-0">
+        <div class="row align-items-center">
+          <div class="col">
+            <h3 class="mb-0 ranking-text">Datos ingresados</h3>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <table class="table table-hover">
+          <p *ngIf="!hayDatos">
+            Por el momento no hay datos ingresados
+          </p>
+          <tbody *ngFor="let dato of datos" >
+            <tr>
+              <td>
+                {{ dato.dato }}
+              </td>
+            </tr>
+            <tr >
+          </tbody>
+        </table>
+     </div> 
+    </div>
+  </div>
