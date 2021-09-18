@@ -1,0 +1,11 @@
+.wrapper {
+  width: 300px;
+  height: 900px;
+  margin-top: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}

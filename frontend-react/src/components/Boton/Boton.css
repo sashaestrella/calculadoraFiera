@@ -1,0 +1,30 @@
+.button {
+  display: flex;
+  height: 2em;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  background-color: rgb(212, 209, 209);
+  color: black;
+  border-color: white;
+  outline: 1px solid white;
+  cursor: pointer;
+}
+
+.operator {
+  background-color: #f48c06;
+  color: white;
+}
+
+.long-boton {
+  flex: 3;
+}
+
+.button:hover {
+  background-color: rgba(212, 209, 209, 0.582);
+}
+
+.operator:hover {
+  background-color: #f48d069f;
+}
