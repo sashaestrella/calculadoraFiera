@@ -5,14 +5,14 @@
 </h1>
 
 ### ⚠️ Primero levantar el backend en una terminal: 
-# cd backend
-# npm install
-# npm start 
+### cd backend
+### npm install
+### npm start 
 
 ### ⚠️ Luego levantar uno o ambos frontend en otras dos terminales:
-# cd frontend-angular / cd frontend-react
-# npm install
-# npm start 
+### cd frontend-angular / cd frontend-react
+### npm install
+### npm start 
 
 ### ⚠️ Ambos frontend hacen uso del backend para guardar los datos ingresados. DB: calculadoradb
 
