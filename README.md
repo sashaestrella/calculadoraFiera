@@ -18,6 +18,12 @@
 
 ### ⚠️ Los datos ingresados se pueden visualizar en el frontend-angular
 
+### Frontend Angular
+![image](https://user-images.githubusercontent.com/37596403/133869040-e2a0e6c3-cec0-45a6-8c05-7dee8102114a.png)
+
+### Frontend React 
+![image](https://user-images.githubusercontent.com/37596403/133869054-9e0b4724-058b-4d11-995d-4d87e50b17ca.png)
+
 ### Tecnologías backend utilizadas:
 <a><img src="https://img.shields.io/badge/javascript%20-%2338B2AC.svg?&style=for-the-badge&logo=javascript&logoColor=white"/>
 </a>
