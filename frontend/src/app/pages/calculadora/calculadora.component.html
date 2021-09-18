@@ -1,0 +1,26 @@
+<div class="wrapper container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4">
+        <div class="wrapper">
+          <div class="result"> 
+              <input class="result" type="text" readonly value="{{result}}">
+          </div>
+          <table class="calculator"> 
+              <tr>
+                  <td colspan="3"><button (click)="resetData()">C</button></td>
+                  <td class="orange"><app-boton [value]="division" (valueClicked)="addToExpression($event)"></app-boton></td>  
+              </tr>
+              <tr *ngFor="let lista of botones; index as idx" >
+                <td *ngFor="let boton of botones[idx]" [ngClass]="{'orange' : boton == 'X' || boton == '-' || boton == '+'}">
+                  <app-boton [value]="boton" (valueClicked)="addToExpression($event)"></app-boton>
+                </td>
+              </tr>
+              <tr>
+                  <td colspan="3"><app-boton [value]="cero" (valueClicked)="addToExpression($event)"></app-boton></td>
+                  <td class="orange"><button class="btn-orange" (click)="setResult()">=</button></td>          
+              <tr>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
